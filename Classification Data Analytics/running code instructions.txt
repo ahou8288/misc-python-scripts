@@ -1,0 +1,29 @@
+I decided not to include the training files with the submission as they are too large.
+To run the code place the "assignment_code.py" file in the same folder as the "test" and "train" files from the python CIFAR 100 dataset, and the "data_batch_1" and "test_batch" files from the python CIFAR 10 dataset. An image of how the files/folder should be set up in included in the appendix (at the bottom) of the report for clarity.
+
+note: the scipy and numpy libraries are used in the solution so please make sure these libraries are present.
+
+If you want to test the cifar10 and cifar100 datasets independantly you can change the mode on line 5 of the code.
+mode 1 is cifar10, mode 2 is cifar100, mode 3 is both.
+
+The code takes a while to run, on my laptop it took 703 seconds. I appologies for this.
+When I run the code on the whole data set the accuracies where:
+cifar100		18.22%
+cifar100 coarse	9.67%
+cifar100 fine	3.05%
+
+if you don't have time for that change the constants section of the code (line 14 to line 26 of the assignment code) to this;
+### CONSTANTS
+number_svd_vectors=5 #Specifies the amount of data stored after dimensional reduction
+progress_display_rate=5000 # Just used to show progress
+
+# Size of the data sets
+cifar10_training_set_size=10000
+cifar10_test_set_size=1000
+cifar10_num_labels=10
+
+cifar100_training_set_size=10000
+cifar100_test_set_size=1000
+cifar100_num_coarse=20
+cifar100_num_fine=100
+This makes it run in 60 seconds.
