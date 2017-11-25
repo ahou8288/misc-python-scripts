@@ -9,12 +9,13 @@ import logging
 title_start_ind = 67
 image_start_ind = 20
 base_webpage = "https://www.crazyguyonabike.com"
-logging_name="sample.log"
+logging_name = "sample.log"
 logging.basicConfig(filename=logging_name, level=logging.INFO)
 
 with open('url_list.txt', 'r') as f:
     url_list = f.readlines()
     url_list = [i.rstrip('\n') for i in url_list]
+print('URL list loaded.')
 
 
 def get_image_list(web_lines):
@@ -35,7 +36,7 @@ def get_image_list(web_lines):
 def get_page_title(html):
     for i in html:
         if '<meta property = "og:title"' in i:
-            return i.rstrip('">')[title_start_ind:].replace('/',' ')[:80]
+            return i.rstrip('">')[title_start_ind:].replace('/', ' ')[:80]
     return 'Page title not found'
 
 
@@ -54,9 +55,9 @@ def write_page_info(title, body, images):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     with open(folder_path + 'content.txt', 'w') as content_file:
-        content_file.write(body)
+        content_file.write(title + '\n\n' + body)
 
-    logging.info('Downloading {} images.'.format(len(images)))
+    logging.info('Downloading {} images'.format(len(images)))
 
     for image_url, image_caption in images:
         response = requests.get(image_url, stream=True)
@@ -87,9 +88,10 @@ def get_page_content(input):
 
     write_page_info(page_title, page_body_text, image_list)
 
-print('URL list loaded.')
+# get_page_content((0, url_list[0]))
 
-print('Beginning parallel download process.')
-pool = Pool(processes=4)
+num_processes = 6
+print('Beginning parallel download process with {} threads.'.format(num_processes))
+pool = Pool(processes=num_processes)
 for _ in tqdm.tqdm(pool.imap_unordered(get_page_content, enumerate(url_list)), total=len(url_list), ncols=160, unit='page'):
     pass
