@@ -1,15 +1,20 @@
+import os
+import shutil
+import requests
+from multiprocessing import Pool
+import tqdm
+import logging
+
 # Constants
 title_start_ind = 67
 image_start_ind = 20
 base_webpage = "https://www.crazyguyonabike.com"
+logging_name="sample.log"
+logging.basicConfig(filename=logging_name, level=logging.INFO)
 
 with open('url_list.txt', 'r') as f:
     url_list = f.readlines()
     url_list = [i.rstrip('\n') for i in url_list]
-
-
-def get_image_content(image_url):
-    print(image_url)
 
 
 def get_image_list(web_lines):
@@ -30,7 +35,7 @@ def get_image_list(web_lines):
 def get_page_title(html):
     for i in html:
         if '<meta property = "og:title"' in i:
-            return i.rstrip('">')[title_start_ind:]
+            return i.rstrip('">')[title_start_ind:].replace('/',' ')[:80]
     return 'Page title not found'
 
 
@@ -43,9 +48,6 @@ def get_page_text(html):
 
 
 def write_page_info(title, body, images):
-    import os
-    import shutil
-    import requests
 
     base_dir = './pages/'
     folder_path = base_dir + title + '/'
@@ -54,21 +56,22 @@ def write_page_info(title, body, images):
     with open(folder_path + 'content.txt', 'w') as content_file:
         content_file.write(body)
 
-    print('Downloading {} images.'.format(len(images)))
+    logging.info('Downloading {} images.'.format(len(images)))
 
     for image_url, image_caption in images:
         response = requests.get(image_url, stream=True)
-        with open(folder_path + image_caption + '.jpg', 'wb') as out_file:
+        with open(folder_path + image_caption[:80] + '.jpg', 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
         del response
 
-    print('"{}" page written to file.'.format(title))
+    logging.info('"{}" page written to file.'.format(title))
 
 
-def get_page_content(page_number, url):
-    import requests
+def get_page_content(input):
+    page_number, url = input
 
     # Get the data
+    logging.info('Getting page {}'.format(url[56:]))
     r = requests.get(url)
     html = r.text
 
@@ -82,14 +85,11 @@ def get_page_content(page_number, url):
 
     page_body_text = get_page_text(web_lines)
 
-    write_page_info(page_title,page_body_text,image_list)
+    write_page_info(page_title, page_body_text, image_list)
 
 print('URL list loaded.')
-get_page_content(0, url_list[0])
 
-from multiprocessing import Pool
-import tqdm
-
-pool = Pool(processes=8)
-for _ in tqdm.tqdm(pool.imap_unordered(get_page_content, enumerate(url_list)), total=len(content), ncols = 160, unit='page'):
+print('Beginning parallel download process.')
+pool = Pool(processes=4)
+for _ in tqdm.tqdm(pool.imap_unordered(get_page_content, enumerate(url_list)), total=len(url_list), ncols=160, unit='page'):
     pass
