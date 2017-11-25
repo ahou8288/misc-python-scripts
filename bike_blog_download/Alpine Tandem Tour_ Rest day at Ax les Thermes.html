@@ -1,0 +1,892 @@
+<HTML>
+
+   <HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta property="fb:app_id" content="966242223397117">
+        <meta property = "og:title" content = "Alpine Tandem Tour: Rest day at Ax les Thermes">
+        <meta property = "og:type" content = "website">
+        <meta property = "og:image" content = "http://www.crazyguyonabike.com/pics/docs/00/01/94/99/large/IMG_1808.JPG?v=0">
+        <meta property = "og:image:width" content = "">
+        <meta property = "og:image:height" content = "">
+        <meta property = "og:url" content = "http://www.crazyguyonabike.com/doc/page/?page_id=523366">
+        <meta property = "og:description" content = "">
+         <link rel="alternate" type="text/xml" title="RSS 2.0" href="http://www.crazyguyonabike.com/doc/rss/?doc_id=19499" /> <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="format-detection" content="telephone=no">
+		<META HTTP-EQUIV="Expires" CONTENT="Sun, 26 Nov 2017 02:16:32 GMT">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function log (msg)
+{
+    setTimeout (
+	function() {
+	    throw new Error(msg);
+	},
+	0);
+}
+
+function el (x)
+{
+    return (typeof x == "string") ? document.getElementById(x) : x;
+}
+
+function hide (x)
+{
+    el(x).style.display = 'none';
+}
+
+function show (x)
+{
+    el(x).style.display = 'block';
+}
+
+function show_inline (x)
+{
+    el(x).style.display = 'inline';
+}
+
+function visible (x)
+{
+    return el(x).style.display == 'none' ? false : true;
+}
+
+function toggle (x)
+{
+    if (visible(x))
+    {
+	hide(x);
+    }
+    else
+    {
+	show(x);
+    }
+    return false;
+}
+
+function toggle_tips ()
+{
+    if (visible('div_tips'))
+    {
+	hide('div_tips');
+	el('span_tips').innerHTML = 'Show tips';
+    }
+    else
+    {
+	show('div_tips');
+	el('span_tips').innerHTML = 'Hide tips';
+    }
+    return false;
+}
+
+function getCookie (name)
+{
+    var match = document.cookie.match (new RegExp (name + '=([^;]+)'));
+    if (match)
+    {
+	return match[1];
+    }
+    else
+    {
+	return '';
+    }
+}
+
+function setCookie (name, value, expiry_days)
+{
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    var date = new Date();
+    date.setTime (date.getTime() + (expiry_days * 24 * 60 * 60 * 1000));
+    var expires = "expires="+ date.toUTCString();
+    var cookie = name + "=" + value + "; " + expires + "; path=/; domain=.crazyguyonabike.com";
+    document.cookie = cookie;
+}
+
+var request = null;
+
+function createRequest()
+{
+    request = null;
+    try
+    {
+	request = new XMLHttpRequest();
+    }
+    catch (trymicrosoft)
+    {
+	try
+	{
+	    request = new ActiveXObject("Msxm12.XMLHTTP");
+	}
+	catch (othermicrosoft)
+	{
+	    try
+	    {
+		request = new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	    catch (failed)
+	    {
+		request = null;
+	    }
+	}
+    }
+}
+
+function doClick (id)
+   {
+       createRequest();
+       if (request != null)
+       {
+	   var url = '/ajax/insecure/click.html?id=' + id + '&page=%2Fdoc%2Fpage%2Findex.html%3Fo%3D1mr%26page_id%3D523366%26v%3D9p' + '&token=' + getCookie('token');
+	   request.open("GET", url, true);
+	   var result = request.send(null);
+       }
+       return true;
+}
+
+
+
+   var email_id;
+
+   function showEmail_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+		if (result.substring(0,5) == 'Error')
+		{
+			alert(result);
+		}
+		else
+		{
+		    el(email_id).onclick = undefined;
+		    el(email_id).innerHTML = result;
+		    el(email_id).href='mailto:'+result;
+		    el(email_id).title='Click again to send an email';
+		}
+	}
+   }
+
+   function showEmail (email, id)
+   {
+        email_id = id;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = '/ajax/decode_email.html?email=' + email + '&page=%2Fdoc%2Fpage%2Findex.html%3Fo%3D1mr%26page_id%3D523366%26v%3D9p' + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = showEmail_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+   
+
+   var id_name;
+   var id_value;
+   var counter;
+
+   function doMark_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+
+		if (result == 'OK')
+		{
+			var element = document.getElementById ('MARK_' + id_name + '_' + id_value + '_' + counter);
+			element.innerHTML = 'RELATION';
+		}
+		else
+		{
+			alert(result);
+		}
+	}
+   }
+
+   function doMark (name, value, topic_id, n)
+   {
+	id_name = name;
+	id_value = value;
+	counter = n;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = "/ajax/mark.html?id_name=" + id_name + "&id_value=" + id_value + '&topic_id=' + topic_id + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = doMark_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+   var bookmark_type;
+   var bookmark_id;
+   var bookmark_counter;
+
+   function doBookmark_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+
+		if (result == 'OK')
+		{
+			var element = document.getElementById ('bookmark_' + bookmark_type + '_' + bookmark_id + '_' + bookmark_counter);
+			element.innerHTML = 'BOOKMARK';
+		}
+		else
+		{
+			alert(result);
+		}
+	}
+   }
+
+   function doBookmark (type, id, counter, topic_id)
+   {
+        bookmark_type = type;
+	bookmark_id = id;
+	bookmark_counter = counter;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = '/ajax/bookmark.html?type=' + type + '&id=' + id + '&topic_id=' + topic_id + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = doBookmark_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+ var context = '';
+ var type = '';
+ var id = 0;
+ var id_field = '';
+ var action = '';
+ var rating = '';
+ var counter = 0;
+
+ function doRatingsCallback()
+ {
+     if (request.readyState == 4)
+     {
+	 var result = request.responseText;
+	 if (result.substring(0,5) == 'Error')
+	 {
+	     if (result.indexOf ('logged in') > -1)
+	     {
+		 
+		 window.location = '/login/?ref=' + escape(window.location);
+	     }
+	     else
+	     {
+		 alert (result);
+	     }
+	 }
+	 else if (result == '')
+	 {
+	     alert ('Request failed, could be due to spotty network connectivity or the webserver is down (hopefully temporarily). Please give it a minute, then reload this page and try again.');
+	 }
+	 else
+	 {
+	     document.getElementById ('divRatings_' + type + '_' + id + '_' + counter).innerHTML = result;
+	     if (action == 'toggle')
+	     {
+		 document.getElementById('RatingCollapsedScore_' + type + '_' + id + '_' + counter).innerHTML = 'Score';
+		 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.display = 'block';
+		 document.getElementById('divRatingsContainer_' + type + '_' + id + '_' + counter).style.zIndex = 100;
+		 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.zIndex = 50;
+	     }
+	 }
+	 action = '';
+     }
+ }
+
+ function closeRatingsMenu ()
+ {
+     if (id > 0 && action == '')
+     {
+	 document.getElementById('RatingCollapsedScore_' + type + '_' + id + '_' + counter).innerHTML = document.getElementById('RatingScore_' + type + '_' + id + '_' + counter).innerHTML;
+	 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.display = 'none';
+	 document.getElementById('divRatingsContainer_' + type + '_' + id + '_' + counter).style.zIndex = 1;
+	 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.zIndex = 1;
+	 id = 0;
+     }
+     var old_context = context;
+     context = '';
+     return (old_context == '') ? true : false;
+ }
+
+ function toggleRatings (the_type, the_id_field, the_id, version, format, filter, the_counter, topic_id)
+ {
+     createRequest();
+     if (request == null)
+     {
+	 return true;
+     }
+     else
+     {
+	 context = 'toggleRatings';
+	 action = '';
+	 if (the_id == id)
+	 {
+	     closeRatingsMenu ();
+	     context = 'toggleRatings';
+	 }
+	 else
+	 {
+	     closeRatingsMenu ();
+	     context = 'toggleRatings';
+	     type = the_type;
+	     id = the_id;
+	     id_field = the_id_field;
+	     counter = the_counter;
+	     action = 'toggle';
+	     var url = "/ajax/doRatings.html?id_field=" + the_id_field + "&id=" + the_id + "&counter=" + counter + "&v=" + version + "&format=" + format + "&filter=" + filter + "&token=CYLKN12ShD" + "&topic_id=" + topic_id;
+	     request.open("GET", url, true);
+	     request.onreadystatechange = doRatingsCallback;
+	     var result = request.send(null);
+	 }
+	 return false;
+     }
+ }
+
+ function doRating (the_type, the_id_field, the_id, the_counter, the_rating, the_delta, version, format, filter, do_confirm, topic_id)
+ {
+     context = 'doRating';
+     type = the_type;
+     id = the_id;
+     id_field = the_id_field;
+     rating = the_rating;
+     counter = the_counter;
+     createRequest();
+     if (request == null)
+     {
+	 return true;
+     }
+     else
+     {
+	 if ((do_confirm == 1 && (( the_rating != 'miscategorized' && the_rating != 'troll' && the_rating != 'abuse' && the_rating != 'spam' && the_rating != 'offtopic' ) || confirm ("Are you sure you want to use this rating? It should not be used lightly. If you click 'Ok' then the webmaster will be notified so further action can be taken.") )) || do_confirm == 0)
+	 {
+	     action = 'do_rating';
+	     var url = "/ajax/doRatings.html?id_field=" + the_id_field + "&id=" + the_id + "&counter=" + counter + "&rating=" + the_rating + "&filter=" + filter + "&delta=" + the_delta + "&v=" + version + "&format=" + format + "&token=CYLKN12ShD" + "&topic_id=" + topic_id;
+	     request.open("GET", url, true);
+	     request.onreadystatechange = doRatingsCallback;
+	     var result = request.send(null);
+	 }
+	 return false;
+     }
+ }
+
+//-->
+</script>
+<title>Alpine Tandem Tour: Rest day at Ax les Thermes</title>
+
+	<style type="text/css">
+	   </style>
+
+   </HEAD>
+
+ <BODY BGCOLOR="Beige"
+    onload="do_onload();"
+    style=""
+   
+
+	onclick="javascript:closeRatingsMenu();"
+	><a name="top"></a>
+   <a href="/email/guestbook/message/?email=1015222687"><img src="/images/guestbook.gif"  STYLE="display:none;"></A>
+      <a href="/email/guestbook/post/?email=2073885758"><img src="/images/guestbook.gif"  STYLE="display:none;"></A>
+   
+
+	<TABLE CELLPADDING="1" WIDTH=100%>
+		<TR>
+			<TD BGCOLOR="white" WIDTH=5%>
+				<NOBR>&nbsp;
+				        <a href="//www.crazyguyonabike.com/?o=1mr" 
+					   ALT=""
+					   style="text-decoration:none;"
+					   TITLE=""><BIG><B>crazyguyonabike</B></BIG></A>&nbsp;</NOBR>
+				</TD>
+			<TD WIDTH=25% ALIGN="LEFT">
+			   <TABLE CELLPADDING="1">
+			      <TR>
+			 	<TD>
+				   <NOBR>
+					Topic: <B>Bicycle Touring</B>
+					[<a href="//www.topicwise.com/?o=1mr">change</A>]
+					</NOBR>
+				   </TD>
+			      </TR>
+			   </TABLE>
+			</TD>
+			<TD ALIGN="RIGHT" WIDTH=70%>
+				<TABLE CELLPADDING="1">
+				   <TR>
+				        <TD><a href="/website/about/?o=1mr">About</A>&nbsp;</TD>
+					   <TD><a href="/website/help/?o=1mr">Help</A>&nbsp;</TD>
+					      <TD><a href="/website/faq/?o=1mr">FAQ</A>&nbsp;</TD>
+					   <TD><a href="/website/sitemap/?o=1mr">Sitemap</A>&nbsp;</TD>
+					   <TD><a href="/website/options/?o=1mr&ref=%252Fdoc%252Fpage%252F%253Fo%253D1mr%2526page_id%253D523366%2526v%253D9p">Options</A>&nbsp;</TD>
+					   <TD><a href="/website/sponsors/?o=1mr">Sponsors</A>&nbsp;</TD>
+					   <TD><a href="/website/sponsors/donate/?o=1mr&src=top">Donate</A>&nbsp;</TD>
+					   <form action="/search/"  METHOD="GET" STYLE="margin-bottom: 0">
+					         <TD><input type="TEXT" name="query" SIZE=10 MAXLENGTH=60 value=""></TD>
+					         <input type="HIDDEN" name="main_type" value="all">
+					         <TD><input type="SUBMIT" value="Search"></TD>
+					      </FORM>
+					   </TR>
+				</TABLE>
+			</TD>
+		</TR>
+	</TABLE>
+
+	<HR>
+
+
+
+   <CENTER>
+         <TABLE CELLPADDING="0" WIDTH=95%>
+         <TR>
+	    <TD BGCOLOR="gainsboro">
+	       <TABLE BORDER="0" CELLSPACING="1" CELLPADDING="1" WIDTH=100%>
+		  <TR BGCOLOR="Beige">
+		     <TD WIDTH=25% VALIGN="TOP">
+			    <TABLE CELLPADDING="0" CELLSPACING="0">
+			       <TR>
+				  <TD>&nbsp;</TD>
+			          <TD WIDTH="100%">
+				      <SMALL> 
+
+   <B>
+      <a href="http://www.crazyguyonabike.com/website/sponsors/corporate/"  TARGET="_blank" onclick="return doClick(103);" REL="nofollow">YOUR AD HERE</A>
+      </B>
+   <BR> Put your product or service in front of bicycle tourists from all over the world! <BR>
+   <FONT COLOR="green">www.crazyguyonabike.com</FONT>
+
+   </SMALL> </TD>
+				  <TD>&nbsp;&nbsp;</TD>
+			       </TR>
+			    </TABLE>
+			</TD>
+			<TD WIDTH=25% VALIGN="TOP">
+			    <TABLE CELLPADDING="0" CELLSPACING="0">
+			       <TR>
+				  <TD>&nbsp;</TD>
+			          <TD WIDTH="100%">
+				      <SMALL> 
+
+   <B>
+      <a href="http://www.easternexpressroute.com/ "  TARGET="_blank" onclick="return doClick(106);" REL="nofollow">The TransAm Eastern Express Bike Route</A>
+      </B>
+   - An easier & faster alternative for the eastern half of the TransAmerica Bike Route <BR>
+   <FONT COLOR="green">www.easternexpressroute.com</FONT>
+
+   </SMALL> </TD>
+				  <TD>&nbsp;&nbsp;</TD>
+			       </TR>
+			    </TABLE>
+			</TD>
+			<TD WIDTH=25%>
+			    &nbsp;
+			</TD>
+		     <TD WIDTH=25%>
+			    &nbsp;
+			</TD>
+		     </TR>
+	       </TABLE>
+	    </TD>
+         </TR>
+	 </TABLE>
+	 </CENTER>
+
+	 <HR>
+
+      <TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0"><TR><TD BGCOLOR="Beige">&nbsp;<A HREF="/?o=1mr" >Home</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/my/?o=1mr" >My</A></TD>
+<TD BGCOLOR="#00ccff">&nbsp;<A HREF="/doc/?o=1mr&doctype=journal" >Journals</A><FONT COLOR="red">*</FONT>&nbsp;</TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/doc/?o=1mr&doctype=article" >Articles</A><FONT COLOR="green">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/forum/?o=1mr" >Forums</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/reviews/?o=1mr" >Reviews</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/resources/?o=1mr" >Resources</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/classifieds/?o=1mr" >Classifieds</A><FONT COLOR="green">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/serendipity/?o=1mr" >Serendipity</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/ratings/?o=1mr" >Ratings</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/directory/?o=1mr" >Directory</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/search/?o=1mr" >Search</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/website/?o=1mr" >Website</A></TD>
+</TR><TR>
+<TD BGCOLOR="#00ccff" COLSPAN=14><TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0"><TR><TD BGCOLOR="white">&nbsp;<A HREF="/doc/?o=1mr&doc_id=19499&v=12b#523366" >Contents</A></TD>
+<TD BGCOLOR="white">&nbsp;<FONT COLOR="gray">Status</FONT></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/latest/?o=1mr&page_id=523366&v=9p" >Latest</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/thumbnails/?o=1mr&doc_id=19499&page=20&v=12b" >Thumbnails</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/slideshow/?o=1mr&doc_id=19499&page=480" >Slideshow</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/author/?o=1mr&doc_id=19499&v=12b" >Author</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=Vz" >Guestbook</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/page/printable/?o=1mr&page_id=523366&v=9p" >Printable</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/edit/page/?o=1mr&page_id=523366&v=9p&from=page" >Edit</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/relation/?type=page&id=523366" onClick="javascript: event.returnValue = false; return doMark('page', 523366, 1, 1);" id="MARK_page_523366_1">Relation</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/search/?o=1mr&page_id=523366&v=9p" >Search</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/bookmark/?type=page&id=523366" onclick="javascript:doBookmark('page', 523366, 1, 1); event.returnValue = false; return false;" id="bookmark_page_523366_1">Bookmark</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/rss/?doc_id=19499" TITLE="RSS 2.0 feed">RSS</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/ratings/?o=1mr&page_id=523366&v=9p" >Ratings</A></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+</TABLE>
+<HR>
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="3" WIDTH=100%>
+<TR>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a ACCESSKEY="f" href="/doc/page/?o=1mr&page_id=503877&v=XP">First</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a ACCESSKEY="p" href="/doc/page/?o=1mr&page_id=523181&v=Al">Prev</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=523505&v=9u">Next</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=528249&v=7">Last</A>
+       </TD>
+
+   <TD WIDTH=30>
+	<NOBR>(page 74 of 109)</NOBR>
+   </TD>
+
+   <TD>
+	 <nobr><A HREF="/doc/?o=1mr&doc_id=19499&v=12b"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Contents" TITLE="Contents" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=504009&v=We"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 2" TITLE="Page 2" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508297&v=RO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 4" TITLE="Page 4" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507129&v=Uv"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 6" TITLE="Page 6" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507130&v=V8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 8" TITLE="Page 8" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=503970&v=Wo"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 10" TITLE="Page 10" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506114&v=W5"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 12" TITLE="Page 12" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506949&v=VE"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 14" TITLE="Page 14" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508223&v=SD"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 16" TITLE="Page 16" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=509338&v=Qe"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 18" TITLE="Page 18" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=514111&v=Pn"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 20" TITLE="Page 20" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515357&v=Pi"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 22" TITLE="Page 22" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515758&v=PJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 24" TITLE="Page 24" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516094&v=P7"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 26" TITLE="Page 26" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516622&v=NO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 28" TITLE="Page 28" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516486&v=NP"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 30" TITLE="Page 30" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517140&v=MY"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 32" TITLE="Page 32" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517471&v=MQ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 34" TITLE="Page 34" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517854&v=Kt"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 36" TITLE="Page 36" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518223&v=KJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 38" TITLE="Page 38" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518515&v=Iq"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 40" TITLE="Page 40" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518705&v=Ip"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 42" TITLE="Page 42" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519183&v=It"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 44" TITLE="Page 44" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519415&v=Hr"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 46" TITLE="Page 46" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519840&v=HL"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 48" TITLE="Page 48" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520037&v=Gu"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 50" TITLE="Page 50" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520467&v=G8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 52" TITLE="Page 52" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520618&v=Fj"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 54" TITLE="Page 54" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520894&v=FT"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 56" TITLE="Page 56" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521151&v=F3"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 58" TITLE="Page 58" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521445&v=EU"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 60" TITLE="Page 60" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521686&v=Dg"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 62" TITLE="Page 62" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521952&v=DO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 64" TITLE="Page 64" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522325&v=CN"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 66" TITLE="Page 66" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522561&v=Bp"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 68" TITLE="Page 68" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522791&v=BM"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 70" TITLE="Page 70" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523107&v=Al"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 72" TITLE="Page 72" BORDER="0"></A><IMG SRC="/images/pixel_pink.gif" WIDTH="4" HEIGHT="12" ALT="Page 74" TITLE="Page 74" BORDER="0"><A HREF="/doc/page/?o=1mr&page_id=523630&v=9r"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 76" TITLE="Page 76" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523931&v=8X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 78" TITLE="Page 78" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523933&v=82"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 80" TITLE="Page 80" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524180&v=7F"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 82" TITLE="Page 82" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524368&v=73"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 84" TITLE="Page 84" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524607&v=6Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 86" TITLE="Page 86" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524883&v=5V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 88" TITLE="Page 88" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525010&v=5X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 90" TITLE="Page 90" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525264&v=4y"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 92" TITLE="Page 92" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525506&v=4Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 94" TITLE="Page 94" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525712&v=3k"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 96" TITLE="Page 96" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525931&v=3K"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 98" TITLE="Page 98" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526121&v=2V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 100" TITLE="Page 100" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526406&v=1o"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 102" TITLE="Page 102" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526676&v=1R"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 104" TITLE="Page 104" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526912&v=f"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 106" TITLE="Page 106" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=527932&v=H"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 108" TITLE="Page 108" BORDER="0"></A></nobr>
+      </TD>
+   <TD ALIGN="RIGHT" WIDTH=50%>
+      
+
+   <td valign="bottom" align="right" >
+      <div id="divRatingsContainer_page_523366_2" style="position:relative;">
+         <nobr id="RatingCollapsedScore_page_523366_2">
+         <a href="/ajax/doRatings.html?id_field=page_id&id=523366&counter=2&v=1" 
+            target="_blank"
+	    title="Rate this page"
+	    style="text-decoration:none; color:gray;"
+	    onClick="javascript: event.returnValue = false; return toggleRatings('page', 'page_id', 523366, 609, 'long', '', 2, 1);">Rating: <span style="color:gray; font-weight:normal;"> (0)</span></A>
+   	 </nobr>
+         <div id="divRatings_page_523366_2" style="position:absolute; top:0; right:0; display:none;"></div>
+      </div>
+   </TD>
+
+</TD>
+
+</TR>
+</TABLE>
+
+<HR>
+
+
+   <BIG><B><a href="/doc/?o=1mr&doc_id=19499&v=12b">Alpine Tandem Tour</A></B></BIG>
+      <BR>
+      By <NOBR><A HREF="/directory/?o=1mr&user=BlueStratos&v=9" title="BlueStratos joined May 10th 2017&#10;Australia > New South Wales > Sydney">BlueStratos</A></NOBR> and <NOBR><A HREF="/directory/?o=1mr&user=PinkStratos" title="PinkStratos joined May 11th 2017">PinkStratos</A></NOBR> - (<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=12b">contact</A>) <H1 >
+	Rest day at Ax les Thermes </H1>
+
+   <H3>
+
+   Saturday September 9, 2017 </H3>
+   <DIV ALIGN="LEFT" >
+It started raining just as predicted and is quite cold so we were glad we were not riding. We accompanied our 'warm showers' host Yann to the local markets which were quite interesting but the rain intensified so we came back to Yann's home and Yann cooked us a delicious lunch followed by local bread and cheese. The best lunch we've had so far on our trip. It was a quiet afternoon with Blue fettling the brakes once more, this time with the aid of a bench grinder.<P>Yann tells us the road to Andorra is narrow and busy (lots of people go to Andorra to buy duty free goods). We are planning an relatively early start in the morning (for us) to hopefully beat the worst of the traffic. Ax les Thermes is at 740 m altitude and the pass is at a out 2200 m so there will be a bit of climbing.  We had planned to do this over two days but because of the traffic we will try to do it in one. The rain is due to stop at 2 am.<P>
+
+   <DIV ALIGN="LEFT">
+   <P>
+   <TABLE ID="pic_3149796"
+	  BGCOLOR="gainsboro"
+	  WIDTH="400"
+	  CELLPADDING="20"
+	  ALIGN="CENTER">
+   <TR>
+   <TD VALIGN="CENTER">
+
+       
+
+   <TABLE WIDTH="100%">
+      <TR>
+	
+
+   <TD ALIGN="LEFT" WIDTH="33%" style="text-decoration:none; color:gray">
+      <NOBR>
+      <a href="/relation/?type=pic&id=3149796&topic_id=1"  target="_blank" style="text-decoration:none; color:gray"onClick="javascript: event.returnValue = false; return doMark('pic', 3149796, 1, 3);" id="MARK_pic_3149796_3" TITLE="Add this pic to your pending relations">Relation</A>
+     	 |
+      <a href="/bookmark/?type=pic&id=3149796&topic_id=1"  style="text-decoration:none; color:gray"onclick="javascript:doBookmark('pic', 3149796, 4, 1); event.returnValue = false; return false;" id="bookmark_pic_3149796_4" TITLE="Bookmark this pic">Bookmark</A>
+     	 |
+      <a href="/doc/edit/page/pic/?pic_id=3149796&command=update&from=page"  style="text-decoration:none; color:gray" TITLE="Edit pic">Edit</A>
+      |
+      <a href="/printable/pic/?o=1mr&pic_id=3149796"  ALT="Printable" TITLE="Printable"><img src="/images/printer_dark_gray.gif"  BORDER="0"></A>
+      |
+      <a href="/report/?o=1mr&ref=%252Fdoc%252Fpage%252Fpic%252F%253Fo%253D1mr%2526pic_id%253D3149796%2526size%253Dsmall"  style="text-decoration:none; color:gray" target="_blank">Report</A>
+      |
+      <a href="/link/?o=1mr&ref=%252Fdoc%252Fpage%252Fpic%252F%253Fo%253D1mr%2526pic_id%253D3149796%2526size%253Dsmall"  style="text-decoration:none; color:gray" target="_blank">Link</A>
+      |
+         <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.crazyguyonabike.com/doc/page/pic/?pic_id=3149796"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/facebook/facebook-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Facebook"></a>
+         <a href="https://twitter.com/home?status=http:////www.crazyguyonabike.com/doc/page/pic/?pic_id=3149796"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/twitter/twitter-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Twitter"></a>
+      </NOBR>
+   </TD>
+
+
+
+   <td valign="bottom" align="right" >
+      <div id="divRatingsContainer_pic_3149796_5" style="position:relative;">
+         <nobr id="RatingCollapsedScore_pic_3149796_5">
+         <a href="/ajax/doRatings.html?id_field=pic_id&id=3149796&counter=5&v=1" 
+            target="_blank"
+	    title="Rate this pic"
+	    style="text-decoration:none; color:gray;"
+	    onClick="javascript: event.returnValue = false; return toggleRatings('pic', 'pic_id', 3149796, 0, 'long', '', 5, 1);">Rating: <span style="color:gray; font-weight:normal;"> (0)</span></A>
+   	 </nobr>
+         <div id="divRatings_pic_3149796_5" style="position:absolute; top:0; right:0; display:none;"></div>
+      </div>
+   </TD>
+
+</TR>
+   </TABLE>
+
+<CENTER>
+       <a href="/doc/page/pic/?o=1mr&pic_id=3149796&size=large">
+	         <img src="/pics/docs/00/01/94/99/small/IMG_1808.JPG?v=0"  WIDTH="666" HEIGHT="500"  ALT="Click here for a larger version of the picture"
+		      TITLE="Click here for a larger version of the picture"
+		      BORDER="0"></A>
+       <P>
+       <div style="text-align:center">
+       <B >Roasting meats and veggies in the market - in the pouring rain</B>
+       </div>
+
+       </CENTER>
+
+   </TD>
+   </TR>
+   </TABLE>
+   </DIV>
+
+   <P>
+
+</DIV>
+<P>
+<HR>
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="3" WIDTH=100%>
+<TR>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=503877&v=XP">First</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=523181&v=Al">Prev</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a ACCESSKEY="n" href="/doc/page/?o=1mr&page_id=523505&v=9u">Next</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro WIDTH=30>
+       <a ACCESSKEY="l" href="/doc/page/?o=1mr&page_id=528249&v=7">Last</A>
+       </TD>
+
+   <TD WIDTH=30>
+	<NOBR>(page 74 of 109)</NOBR>
+   </TD>
+
+   <TD>
+	 <nobr><A HREF="/doc/?o=1mr&doc_id=19499&v=12b"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Contents" TITLE="Contents" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=504009&v=We"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 2" TITLE="Page 2" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508297&v=RO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 4" TITLE="Page 4" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507129&v=Uv"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 6" TITLE="Page 6" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507130&v=V8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 8" TITLE="Page 8" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=503970&v=Wo"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 10" TITLE="Page 10" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506114&v=W5"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 12" TITLE="Page 12" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506949&v=VE"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 14" TITLE="Page 14" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508223&v=SD"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 16" TITLE="Page 16" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=509338&v=Qe"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 18" TITLE="Page 18" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=514111&v=Pn"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 20" TITLE="Page 20" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515357&v=Pi"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 22" TITLE="Page 22" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515758&v=PJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 24" TITLE="Page 24" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516094&v=P7"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 26" TITLE="Page 26" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516622&v=NO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 28" TITLE="Page 28" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516486&v=NP"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 30" TITLE="Page 30" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517140&v=MY"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 32" TITLE="Page 32" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517471&v=MQ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 34" TITLE="Page 34" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517854&v=Kt"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 36" TITLE="Page 36" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518223&v=KJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 38" TITLE="Page 38" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518515&v=Iq"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 40" TITLE="Page 40" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518705&v=Ip"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 42" TITLE="Page 42" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519183&v=It"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 44" TITLE="Page 44" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519415&v=Hr"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 46" TITLE="Page 46" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519840&v=HL"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 48" TITLE="Page 48" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520037&v=Gu"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 50" TITLE="Page 50" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520467&v=G8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 52" TITLE="Page 52" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520618&v=Fj"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 54" TITLE="Page 54" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520894&v=FT"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 56" TITLE="Page 56" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521151&v=F3"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 58" TITLE="Page 58" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521445&v=EU"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 60" TITLE="Page 60" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521686&v=Dg"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 62" TITLE="Page 62" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521952&v=DO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 64" TITLE="Page 64" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522325&v=CN"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 66" TITLE="Page 66" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522561&v=Bp"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 68" TITLE="Page 68" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522791&v=BM"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 70" TITLE="Page 70" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523107&v=Al"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 72" TITLE="Page 72" BORDER="0"></A><IMG SRC="/images/pixel_pink.gif" WIDTH="4" HEIGHT="12" ALT="Page 74" TITLE="Page 74" BORDER="0"><A HREF="/doc/page/?o=1mr&page_id=523630&v=9r"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 76" TITLE="Page 76" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523931&v=8X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 78" TITLE="Page 78" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523933&v=82"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 80" TITLE="Page 80" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524180&v=7F"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 82" TITLE="Page 82" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524368&v=73"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 84" TITLE="Page 84" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524607&v=6Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 86" TITLE="Page 86" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524883&v=5V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 88" TITLE="Page 88" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525010&v=5X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 90" TITLE="Page 90" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525264&v=4y"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 92" TITLE="Page 92" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525506&v=4Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 94" TITLE="Page 94" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525712&v=3k"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 96" TITLE="Page 96" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525931&v=3K"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 98" TITLE="Page 98" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526121&v=2V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 100" TITLE="Page 100" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526406&v=1o"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 102" TITLE="Page 102" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526676&v=1R"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 104" TITLE="Page 104" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526912&v=f"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 106" TITLE="Page 106" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=527932&v=H"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 108" TITLE="Page 108" BORDER="0"></A></nobr>
+      </TD>
+   <TD ALIGN="RIGHT" WIDTH=50%>
+      </TD>
+
+</TR>
+</TABLE>
+
+<P>
+   <HR>
+   <TABLE WIDTH=100% ID="bottom">
+      <TR>
+	<TD ALIGN="LEFT">"Alpine Tandem Tour" Copyright &copy; 2017 By
+   <NOBR><A HREF="/directory/?o=1mr&user=BlueStratos&v=9" title="BlueStratos joined May 10th 2017&#10;Australia > New South Wales > Sydney">BlueStratos</A></NOBR> and <NOBR><A HREF="/directory/?o=1mr&user=PinkStratos" title="PinkStratos joined May 11th 2017">PinkStratos</A></NOBR> - (<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=12b">contact</A>).
+   All rights reserved.
+   <BR>
+Page was created on September 9, 2017 05:57 (US/Pacific), 
+   last updated on September 9, 2017 07:24 (US/Pacific) <BR>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>
+Website Copyright &copy; 2000-2017 by Neil Gunton Fri 24 Nov 2017 18:16 (US/Pacific)
+(<span id="span_timer">0.110s</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#top">Top</A>
+&nbsp;&nbsp;
+<a href="/link/?o=1mr&ref=%252Fdoc%252Fpage%252F%253Fo%253D1mr%2526page_id%253D523366%2526v%253D9p"  target="_blank">Link</A>
+&nbsp;&nbsp;
+<a href="/report/?o=1mr&ref=%252Fdoc%252Fpage%252F%253Fo%253D1mr%2526page_id%253D523366%2526v%253D9p"  TITLE="Report problems with this page to the webmaster" target="_blank">Report</A>
+&nbsp;&nbsp;
+<a href="/website/tos/">Terms of Service</A>
+&nbsp;&nbsp;
+</td>
+<td>
+<table cellpadding="2" cellspacing="3">
+      <tr>
+         <td ><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.crazyguyonabike.com%2Fdoc%2Fpage%2F%3Fpage_id%3D523366"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/facebook/facebook-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Facebook"></a></td>
+         <td ><a href="https://twitter.com/home?status=http%3A%2F%2Fwww.crazyguyonabike.com%2Fdoc%2Fpage%2F%3Fpage_id%3D523366"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/twitter/twitter-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Twitter"></a></td>
+      </tr>
+   </table>
+</td>
+<td></td>
+</tr>
+</table>
+</TD>
+	<TD><a href="/email/guestbook/message/?email=3166014428"><img src="/images/guestbook.gif"  STYLE="display:none;"></A></TD>
+	</TR>
+   </TABLE>
+<div id="div_donation_reminder" style="display:none; position:fixed; top:50%; left:50%; width:60%; height:60%; transform:translate(-50%,-50%); padding:16px; border:16px solid orange; background-color:white; z-index:1002; overflow:auto;"></div>
+   <div id="div_black_overlay" style="display:none; position:fixed; top:0%; left:0%; width:100%; height:100%; background-color:black; z-index:1001; opacity:.80;"></div>
+</BODY>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function donation_reminder_callback ()
+{
+    if (request.readyState == 4)
+    {
+	show('div_black_overlay');
+	show('div_donation_reminder');
+	el('div_donation_reminder').innerHTML = request.responseText;
+    }
+}
+
+function do_donation_reminder ()
+{
+    createRequest();
+    if (request != null)
+    {
+	var d = new Date();
+	var now = Math.round(d.getTime() / 1000);
+	var url = '/ajax/insecure/get_donation_reminder.html?browser=' + getCookie('browser') + '&uid=' + getCookie('uid');
+	request.open("GET", url, true);
+	request.onreadystatechange = donation_reminder_callback;
+	var result = request.send(null);
+    }
+}
+
+function check_last_donation_callback ()
+{
+    if (request.readyState == 4)
+    {
+	var result = request.responseText;
+	if (result == '0')
+	{
+	    do_donation_reminder();
+	}
+    }
+}
+
+function check_donation_reminder ()
+{
+    var d = new Date();
+    var now = Math.round(d.getTime() / 1000);
+    if (getCookie ('last_donation_reminder') == '')
+    {
+	setCookie ('last_donation_reminder', now, 365*10);
+    }
+    else
+    {
+	if (false)
+	{
+	    do_donation_reminder();
+	}
+	else if (true && (parseInt (getCookie ('last_donation_reminder')) + 7776000 < now || false))
+	{
+	    createRequest();
+	    if (request != null)
+	    {
+		var url = '/ajax/insecure/check_last_donation.html?browser=' + getCookie('browser') + '&uid=' + getCookie('uid') + '&last_donation_reminder=' + getCookie('last_donation_reminder') + '&now=' + now;
+		request.open("GET", url, true);
+		request.onreadystatechange = check_last_donation_callback;
+		var result = request.send(null);
+	    }
+	    setCookie ('last_donation_reminder', now, 365*10);
+	}
+    }
+}
+
+function keyboard_navigation (event)
+{
+    try
+    {
+	if (event.altKey)
+	{
+	    switch (event.keyCode)
+	    {
+	    case 70: // f
+		if (document.querySelectorAll('a[accesskey="f"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="f"]')[0];
+		}
+		break;
+	    case 76: // l
+		if (document.querySelectorAll('a[accesskey="l"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="l"]')[0];
+		}
+		break;
+	    case 78: // n
+		if (document.querySelectorAll('a[accesskey="n"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="n"]')[0];
+		}
+		break;
+	    case 80: // p
+		if (document.querySelectorAll('a[accesskey="p"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="p"]')[0];
+		}
+		break;
+	    }
+	}
+    }
+    catch(error)
+    {
+    }
+}
+
+function do_onload ()
+{
+    check_donation_reminder();
+
+    addEventListener ('keydown', keyboard_navigation);
+     
+    
+	if (top != window)
+	{
+		top.location.href = window.location.href;
+	}
+    
+}
+
+
+//-->
+</script>
+</HTML>
