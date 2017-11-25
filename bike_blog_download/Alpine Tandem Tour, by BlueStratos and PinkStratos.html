@@ -1,0 +1,1183 @@
+<HTML>
+
+   <HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta property="fb:app_id" content="966242223397117">
+        <meta property = "og:title" content = "Alpine Tandem Tour, by BlueStratos and PinkStratos">
+        <meta property = "og:type" content = "website">
+        <meta property = "og:image" content = "">
+        <meta property = "og:image:width" content = "">
+        <meta property = "og:image:height" content = "">
+        <meta property = "og:url" content = "http://www.crazyguyonabike.com/doc/?doc_id=19499">
+        <meta property = "og:description" content = "Oldies attempting a mountain lovers route; Alps, Massif Centrale, Pyrennes.">
+         <link rel="alternate" type="text/xml" title="RSS 2.0" href="http://www.crazyguyonabike.com/doc/rss/?doc_id=19499" /> <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="format-detection" content="telephone=no">
+		<META HTTP-EQUIV="Expires" CONTENT="Sat, 25 Nov 2017 02:15:30 GMT">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss/?doc_id=19499">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function log (msg)
+{
+    setTimeout (
+	function() {
+	    throw new Error(msg);
+	},
+	0);
+}
+
+function el (x)
+{
+    return (typeof x == "string") ? document.getElementById(x) : x;
+}
+
+function hide (x)
+{
+    el(x).style.display = 'none';
+}
+
+function show (x)
+{
+    el(x).style.display = 'block';
+}
+
+function show_inline (x)
+{
+    el(x).style.display = 'inline';
+}
+
+function visible (x)
+{
+    return el(x).style.display == 'none' ? false : true;
+}
+
+function toggle (x)
+{
+    if (visible(x))
+    {
+	hide(x);
+    }
+    else
+    {
+	show(x);
+    }
+    return false;
+}
+
+function toggle_tips ()
+{
+    if (visible('div_tips'))
+    {
+	hide('div_tips');
+	el('span_tips').innerHTML = 'Show tips';
+    }
+    else
+    {
+	show('div_tips');
+	el('span_tips').innerHTML = 'Hide tips';
+    }
+    return false;
+}
+
+function getCookie (name)
+{
+    var match = document.cookie.match (new RegExp (name + '=([^;]+)'));
+    if (match)
+    {
+	return match[1];
+    }
+    else
+    {
+	return '';
+    }
+}
+
+function setCookie (name, value, expiry_days)
+{
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    var date = new Date();
+    date.setTime (date.getTime() + (expiry_days * 24 * 60 * 60 * 1000));
+    var expires = "expires="+ date.toUTCString();
+    var cookie = name + "=" + value + "; " + expires + "; path=/; domain=.crazyguyonabike.com";
+    document.cookie = cookie;
+}
+
+var request = null;
+
+function createRequest()
+{
+    request = null;
+    try
+    {
+	request = new XMLHttpRequest();
+    }
+    catch (trymicrosoft)
+    {
+	try
+	{
+	    request = new ActiveXObject("Msxm12.XMLHTTP");
+	}
+	catch (othermicrosoft)
+	{
+	    try
+	    {
+		request = new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	    catch (failed)
+	    {
+		request = null;
+	    }
+	}
+    }
+}
+
+function doClick (id)
+   {
+       createRequest();
+       if (request != null)
+       {
+	   var url = '/ajax/insecure/click.html?id=' + id + '&page=%2Fdoc%2Findex.html%3Fo%3D1mr%26doc_id%3D19499%26v%3DEd' + '&token=' + getCookie('token');
+	   request.open("GET", url, true);
+	   var result = request.send(null);
+       }
+       return true;
+}
+
+
+
+   var email_id;
+
+   function showEmail_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+		if (result.substring(0,5) == 'Error')
+		{
+			alert(result);
+		}
+		else
+		{
+		    el(email_id).onclick = undefined;
+		    el(email_id).innerHTML = result;
+		    el(email_id).href='mailto:'+result;
+		    el(email_id).title='Click again to send an email';
+		}
+	}
+   }
+
+   function showEmail (email, id)
+   {
+        email_id = id;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = '/ajax/decode_email.html?email=' + email + '&page=%2Fdoc%2Findex.html%3Fo%3D1mr%26doc_id%3D19499%26v%3DEd' + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = showEmail_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+   
+
+   var id_name;
+   var id_value;
+   var counter;
+
+   function doMark_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+
+		if (result == 'OK')
+		{
+			var element = document.getElementById ('MARK_' + id_name + '_' + id_value + '_' + counter);
+			element.innerHTML = 'RELATION';
+		}
+		else
+		{
+			alert(result);
+		}
+	}
+   }
+
+   function doMark (name, value, topic_id, n)
+   {
+	id_name = name;
+	id_value = value;
+	counter = n;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = "/ajax/mark.html?id_name=" + id_name + "&id_value=" + id_value + '&topic_id=' + topic_id + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = doMark_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+   var bookmark_type;
+   var bookmark_id;
+   var bookmark_counter;
+
+   function doBookmark_callback()
+   {
+	if (request.readyState == 4)
+	{
+		var result = request.responseText;
+
+		if (result == 'OK')
+		{
+			var element = document.getElementById ('bookmark_' + bookmark_type + '_' + bookmark_id + '_' + bookmark_counter);
+			element.innerHTML = 'BOOKMARK';
+		}
+		else
+		{
+			alert(result);
+		}
+	}
+   }
+
+   function doBookmark (type, id, counter, topic_id)
+   {
+        bookmark_type = type;
+	bookmark_id = id;
+	bookmark_counter = counter;
+	createRequest();
+	if (request == null)
+	{
+		return true;
+	}
+	else
+	{
+		var url = '/ajax/bookmark.html?type=' + type + '&id=' + id + '&topic_id=' + topic_id + '&token=' + getCookie('token');
+		request.open("GET", url, true);
+		request.onreadystatechange = doBookmark_callback;
+		var result = request.send(null);
+		return false;
+	}
+   }
+
+
+
+ var context = '';
+ var type = '';
+ var id = 0;
+ var id_field = '';
+ var action = '';
+ var rating = '';
+ var counter = 0;
+
+ function doRatingsCallback()
+ {
+     if (request.readyState == 4)
+     {
+	 var result = request.responseText;
+	 if (result.substring(0,5) == 'Error')
+	 {
+	     if (result.indexOf ('logged in') > -1)
+	     {
+		 
+		 window.location = '/login/?ref=' + escape(window.location);
+	     }
+	     else
+	     {
+		 alert (result);
+	     }
+	 }
+	 else if (result == '')
+	 {
+	     alert ('Request failed, could be due to spotty network connectivity or the webserver is down (hopefully temporarily). Please give it a minute, then reload this page and try again.');
+	 }
+	 else
+	 {
+	     document.getElementById ('divRatings_' + type + '_' + id + '_' + counter).innerHTML = result;
+	     if (action == 'toggle')
+	     {
+		 document.getElementById('RatingCollapsedScore_' + type + '_' + id + '_' + counter).innerHTML = 'Score';
+		 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.display = 'block';
+		 document.getElementById('divRatingsContainer_' + type + '_' + id + '_' + counter).style.zIndex = 100;
+		 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.zIndex = 50;
+	     }
+	 }
+	 action = '';
+     }
+ }
+
+ function closeRatingsMenu ()
+ {
+     if (id > 0 && action == '')
+     {
+	 document.getElementById('RatingCollapsedScore_' + type + '_' + id + '_' + counter).innerHTML = document.getElementById('RatingScore_' + type + '_' + id + '_' + counter).innerHTML;
+	 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.display = 'none';
+	 document.getElementById('divRatingsContainer_' + type + '_' + id + '_' + counter).style.zIndex = 1;
+	 document.getElementById('divRatings_' + type + '_' + id + '_' + counter).style.zIndex = 1;
+	 id = 0;
+     }
+     var old_context = context;
+     context = '';
+     return (old_context == '') ? true : false;
+ }
+
+ function toggleRatings (the_type, the_id_field, the_id, version, format, filter, the_counter, topic_id)
+ {
+     createRequest();
+     if (request == null)
+     {
+	 return true;
+     }
+     else
+     {
+	 context = 'toggleRatings';
+	 action = '';
+	 if (the_id == id)
+	 {
+	     closeRatingsMenu ();
+	     context = 'toggleRatings';
+	 }
+	 else
+	 {
+	     closeRatingsMenu ();
+	     context = 'toggleRatings';
+	     type = the_type;
+	     id = the_id;
+	     id_field = the_id_field;
+	     counter = the_counter;
+	     action = 'toggle';
+	     var url = "/ajax/doRatings.html?id_field=" + the_id_field + "&id=" + the_id + "&counter=" + counter + "&v=" + version + "&format=" + format + "&filter=" + filter + "&token=CYLKN12ShD" + "&topic_id=" + topic_id;
+	     request.open("GET", url, true);
+	     request.onreadystatechange = doRatingsCallback;
+	     var result = request.send(null);
+	 }
+	 return false;
+     }
+ }
+
+ function doRating (the_type, the_id_field, the_id, the_counter, the_rating, the_delta, version, format, filter, do_confirm, topic_id)
+ {
+     context = 'doRating';
+     type = the_type;
+     id = the_id;
+     id_field = the_id_field;
+     rating = the_rating;
+     counter = the_counter;
+     createRequest();
+     if (request == null)
+     {
+	 return true;
+     }
+     else
+     {
+	 if ((do_confirm == 1 && (( the_rating != 'miscategorized' && the_rating != 'troll' && the_rating != 'abuse' && the_rating != 'spam' && the_rating != 'offtopic' ) || confirm ("Are you sure you want to use this rating? It should not be used lightly. If you click 'Ok' then the webmaster will be notified so further action can be taken.") )) || do_confirm == 0)
+	 {
+	     action = 'do_rating';
+	     var url = "/ajax/doRatings.html?id_field=" + the_id_field + "&id=" + the_id + "&counter=" + counter + "&rating=" + the_rating + "&filter=" + filter + "&delta=" + the_delta + "&v=" + version + "&format=" + format + "&token=CYLKN12ShD" + "&topic_id=" + topic_id;
+	     request.open("GET", url, true);
+	     request.onreadystatechange = doRatingsCallback;
+	     var result = request.send(null);
+	 }
+	 return false;
+     }
+ }
+
+//-->
+</script>
+<title>Alpine Tandem Tour, by BlueStratos and PinkStratos</title>
+
+	<style type="text/css">
+	   </style>
+
+   </HEAD>
+
+ <BODY BGCOLOR="Beige"
+    onload="do_onload();"
+    style=""
+   
+
+	onclick="javascript:closeRatingsMenu();"
+	><a name="top"></a>
+   <a href="/email/guestbook/message/?email=2122232416"><img src="/images/guestbook.gif"  STYLE="display:none;"></A>
+      <a href="/email/guestbook/post/?email=2524012001"><img src="/images/guestbook.gif"  STYLE="display:none;"></A>
+   
+
+	<TABLE CELLPADDING="1" WIDTH=100%>
+		<TR>
+			<TD BGCOLOR="white" WIDTH=5%>
+				<NOBR>&nbsp;
+				        <a href="//www.crazyguyonabike.com/?o=1mr" 
+					   ALT=""
+					   style="text-decoration:none;"
+					   TITLE=""><BIG><B>crazyguyonabike</B></BIG></A>&nbsp;</NOBR>
+				</TD>
+			<TD WIDTH=25% ALIGN="LEFT">
+			   <TABLE CELLPADDING="1">
+			      <TR>
+			 	<TD>
+				   <NOBR>
+					Topic: <B>Bicycle Touring</B>
+					[<a href="//www.topicwise.com/?o=1mr">change</A>]
+					</NOBR>
+				   </TD>
+			      </TR>
+			   </TABLE>
+			</TD>
+			<TD ALIGN="RIGHT" WIDTH=70%>
+				<TABLE CELLPADDING="1">
+				   <TR>
+				        <TD><a href="/website/about/?o=1mr">About</A>&nbsp;</TD>
+					   <TD><a href="/website/help/?o=1mr">Help</A>&nbsp;</TD>
+					      <TD><a href="/website/faq/?o=1mr">FAQ</A>&nbsp;</TD>
+					   <TD><a href="/website/sitemap/?o=1mr">Sitemap</A>&nbsp;</TD>
+					   <TD><a href="/website/options/?o=1mr&ref=%252Fdoc%252F%253Fo%253D1mr%2526doc_id%253D19499%2526v%253DEd">Options</A>&nbsp;</TD>
+					   <TD><a href="/website/sponsors/?o=1mr">Sponsors</A>&nbsp;</TD>
+					   <TD><a href="/website/sponsors/donate/?o=1mr&src=top">Donate</A>&nbsp;</TD>
+					   <form action="/search/"  METHOD="GET" STYLE="margin-bottom: 0">
+					         <TD><input type="TEXT" name="query" SIZE=10 MAXLENGTH=60 value=""></TD>
+					         <input type="HIDDEN" name="main_type" value="all">
+					         <TD><input type="SUBMIT" value="Search"></TD>
+					      </FORM>
+					   </TR>
+				</TABLE>
+			</TD>
+		</TR>
+	</TABLE>
+
+	<HR>
+
+
+
+   <CENTER>
+         <TABLE CELLPADDING="0" WIDTH=95%>
+         <TR>
+	    <TD BGCOLOR="gainsboro">
+	       <TABLE BORDER="0" CELLSPACING="1" CELLPADDING="1" WIDTH=100%>
+		  <TR BGCOLOR="Beige">
+		     <TD WIDTH=25% VALIGN="TOP">
+			    <TABLE CELLPADDING="0" CELLSPACING="0">
+			       <TR>
+				  <TD>&nbsp;</TD>
+			          <TD WIDTH="100%">
+				      <SMALL> 
+
+   <B>
+      <a href="http://www.easternexpressroute.com/ "  TARGET="_blank" onclick="return doClick(106);" REL="nofollow">The TransAm Eastern Express Bike Route</A>
+      </B>
+   - An easier & faster alternative for the eastern half of the TransAmerica Bike Route <BR>
+   <FONT COLOR="green">www.easternexpressroute.com</FONT>
+
+   </SMALL> </TD>
+				  <TD>&nbsp;&nbsp;</TD>
+			       </TR>
+			    </TABLE>
+			</TD>
+			<TD WIDTH=25% VALIGN="TOP">
+			    <TABLE CELLPADDING="0" CELLSPACING="0">
+			       <TR>
+				  <TD>&nbsp;</TD>
+			          <TD WIDTH="100%">
+				      <SMALL> 
+
+   <B>
+      <a href="http://www.crazyguyonabike.com/website/sponsors/corporate/"  TARGET="_blank" onclick="return doClick(103);" REL="nofollow">YOUR AD HERE</A>
+      </B>
+   <BR> Put your product or service in front of bicycle tourists from all over the world! <BR>
+   <FONT COLOR="green">www.crazyguyonabike.com</FONT>
+
+   </SMALL> </TD>
+				  <TD>&nbsp;&nbsp;</TD>
+			       </TR>
+			    </TABLE>
+			</TD>
+			<TD WIDTH=25%>
+			    &nbsp;
+			</TD>
+		     <TD WIDTH=25%>
+			    &nbsp;
+			</TD>
+		     </TR>
+	       </TABLE>
+	    </TD>
+         </TR>
+	 </TABLE>
+	 </CENTER>
+
+	 <HR>
+
+      <TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0"><TR><TD BGCOLOR="Beige">&nbsp;<A HREF="/?o=1mr" >Home</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/my/?o=1mr" >My</A></TD>
+<TD BGCOLOR="#00ccff">&nbsp;<A HREF="/doc/?o=1mr&doctype=journal" >Journals</A><FONT COLOR="red">*</FONT>&nbsp;</TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/doc/?o=1mr&doctype=article" >Articles</A><FONT COLOR="green">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/forum/?o=1mr" >Forums</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/reviews/?o=1mr" >Reviews</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/resources/?o=1mr" >Resources</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/classifieds/?o=1mr" >Classifieds</A><FONT COLOR="green">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/serendipity/?o=1mr" >Serendipity</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/ratings/?o=1mr" >Ratings</A><FONT COLOR="red">*</FONT></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/directory/?o=1mr" >Directory</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/search/?o=1mr" >Search</A></TD>
+<TD BGCOLOR="Beige">&nbsp;<A HREF="/website/?o=1mr" >Website</A></TD>
+</TR><TR>
+<TD BGCOLOR="#00ccff" COLSPAN=14><TABLE BORDER="0" CELLPADDING="3" CELLSPACING="0"><TR><TD BGCOLOR="#ffcc99">&nbsp;<BIG><B>Contents</B></BIG>&nbsp;</TD>
+<TD BGCOLOR="white">&nbsp;<FONT COLOR="gray">Status</FONT></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/latest/?o=1mr&doc_id=19499&v=12b" >Latest</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/thumbnails/?o=1mr&doc_id=19499&v=12b" >Thumbnails</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/slideshow/?o=1mr&doc_id=19499&page=1&v=12b" >Slideshow</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/author/?o=1mr&doc_id=19499&v=12b" >Author</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=Vz" >Guestbook</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/printable/?o=1mr&doc_id=19499&v=12b" >Printable</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/edit/?o=1mr&doc_id=19499&v=12b" >Edit</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/relation/?type=doc&id=19499" onClick="javascript: event.returnValue = false; return doMark('doc', 19499, 1, 1);" id="MARK_doc_19499_1">Relation</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/search/?o=1mr&doc_id=19499&v=12b" >Search</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/bookmark/?type=doc&id=19499" onclick="javascript:doBookmark('doc', 19499, 1, 1); event.returnValue = false; return false;" id="bookmark_doc_19499_1">Bookmark</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/rss/?doc_id=19499" TITLE="RSS 2.0 feed">RSS</A></TD>
+<TD BGCOLOR="white">&nbsp;<A HREF="/doc/ratings/?o=1mr&doc_id=19499&v=12b" >Ratings</A></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+</TABLE>
+<HR>
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="3" WIDTH=100%>
+   <TR>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a ACCESSKEY="f" href="/doc/page/?o=1mr&page_id=503877&v=XP">First</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <FONT COLOR="white">Prev</FONT>
+   </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=503877&v=XP">Next</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=528249&v=7">Last</A>
+       </TD>
+
+   <TD WIDTH=30>
+	<NOBR>(109 pages)</NOBR>
+   </TD>
+
+   <TD ALIGN="LEFT">
+         <nobr><IMG SRC="/images/pixel_pink.gif" WIDTH="4" HEIGHT="12" ALT="Contents" TITLE="Contents" BORDER="0"><A HREF="/doc/page/?o=1mr&page_id=504009&v=We"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 2" TITLE="Page 2" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508297&v=RO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 4" TITLE="Page 4" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507129&v=Uv"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 6" TITLE="Page 6" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507130&v=V8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 8" TITLE="Page 8" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=503970&v=Wo"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 10" TITLE="Page 10" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506114&v=W5"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 12" TITLE="Page 12" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506949&v=VE"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 14" TITLE="Page 14" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508223&v=SD"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 16" TITLE="Page 16" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=509338&v=Qe"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 18" TITLE="Page 18" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=514111&v=Pn"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 20" TITLE="Page 20" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515357&v=Pi"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 22" TITLE="Page 22" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515758&v=PJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 24" TITLE="Page 24" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516094&v=P7"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 26" TITLE="Page 26" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516622&v=NO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 28" TITLE="Page 28" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516486&v=NP"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 30" TITLE="Page 30" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517140&v=MY"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 32" TITLE="Page 32" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517471&v=MQ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 34" TITLE="Page 34" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517854&v=Kt"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 36" TITLE="Page 36" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518223&v=KJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 38" TITLE="Page 38" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518515&v=Iq"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 40" TITLE="Page 40" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518705&v=Ip"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 42" TITLE="Page 42" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519183&v=It"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 44" TITLE="Page 44" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519415&v=Hr"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 46" TITLE="Page 46" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519840&v=HL"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 48" TITLE="Page 48" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520037&v=Gu"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 50" TITLE="Page 50" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520467&v=G8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 52" TITLE="Page 52" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520618&v=Fj"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 54" TITLE="Page 54" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520894&v=FT"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 56" TITLE="Page 56" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521151&v=F3"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 58" TITLE="Page 58" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521445&v=EU"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 60" TITLE="Page 60" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521686&v=Dg"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 62" TITLE="Page 62" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521952&v=DO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 64" TITLE="Page 64" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522325&v=CN"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 66" TITLE="Page 66" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522561&v=Bp"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 68" TITLE="Page 68" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522791&v=BM"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 70" TITLE="Page 70" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523107&v=Al"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 72" TITLE="Page 72" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523366&v=9p"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 74" TITLE="Page 74" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523630&v=9r"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 76" TITLE="Page 76" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523931&v=8X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 78" TITLE="Page 78" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523933&v=82"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 80" TITLE="Page 80" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524180&v=7F"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 82" TITLE="Page 82" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524368&v=73"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 84" TITLE="Page 84" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524607&v=6Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 86" TITLE="Page 86" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524883&v=5V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 88" TITLE="Page 88" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525010&v=5X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 90" TITLE="Page 90" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525264&v=4y"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 92" TITLE="Page 92" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525506&v=4Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 94" TITLE="Page 94" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525712&v=3k"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 96" TITLE="Page 96" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525931&v=3K"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 98" TITLE="Page 98" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526121&v=2V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 100" TITLE="Page 100" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526406&v=1o"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 102" TITLE="Page 102" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526676&v=1R"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 104" TITLE="Page 104" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526912&v=f"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 106" TITLE="Page 106" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=527932&v=H"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 108" TITLE="Page 108" BORDER="0"></A></nobr>
+      </TD>
+   <TD ALIGN="RIGHT" WIDTH=50%>
+      
+
+   <td valign="bottom" align="right" >
+      <div id="divRatingsContainer_doc_19499_2" style="position:relative;">
+         <nobr id="RatingCollapsedScore_doc_19499_2">
+         <a href="/ajax/doRatings.html?id_field=doc_id&id=19499&counter=2&v=1" 
+            target="_blank"
+	    title="Rate this doc"
+	    style="text-decoration:none; color:gray;"
+	    onClick="javascript: event.returnValue = false; return toggleRatings('doc', 'doc_id', 19499, 4005, 'long', '', 2, 1);">Rating: <span style="color:gray; font-weight:normal;"> (0)</span></A>
+   	 </nobr>
+         <div id="divRatings_doc_19499_2" style="position:absolute; top:0; right:0; display:none;"></div>
+      </div>
+   </TD>
+
+</TD>
+
+   </TR>
+   </TABLE>
+
+   <HR>
+   
+
+   <CENTER>
+	<H1>Alpine Tandem Tour</H1>
+	<HR>
+	<H3>Oldies attempting a mountain lovers route; Alps, Massif Centrale, Pyrennes.</H3>
+	
+
+   6,031 km (3,747 miles) recorded so far over
+	 106 days from July 13, 2017 to October 26, 2017 <BR>
+   <P>
+	<B>Topic</B>: 
+
+   <a href="/doc/19499">Bicycle Touring</A>
+      &nbsp;
+   <BR>
+	<B>Categories</B>: <A HREF="/doc/categories/?o=1mr&category_id=124&doctype=journal">Tour diaries</A>, <A HREF="/doc/categories/?o=1mr&category_id=403&doctype=journal">Camping</A>, <A HREF="/doc/categories/?o=1mr&category_id=329&doctype=journal">Custom bikes</A>, <A HREF="/doc/categories/?o=1mr&category_id=212&doctype=journal">Equipment lists</A>, <A HREF="/doc/categories/?o=1mr&category_id=349&doctype=journal">Expedition touring bikes</A>, <A HREF="/doc/categories/?o=1mr&category_id=315&doctype=journal">Folding bicycles</A>, <A HREF="/doc/categories/?o=1mr&category_id=405&doctype=journal">Stealth camping</A>, <A HREF="/doc/categories/?o=1mr&category_id=88&doctype=journal">Tandem</A>, <A HREF="/doc/categories/?o=1mr&category_id=406&doctype=journal">Warm showers</A>, <A HREF="/doc/categories/?o=1mr&category_id=184&doctype=journal">3-6 months</A>, <A HREF="/doc/categories/?o=1mr&category_id=157&doctype=journal">Alps</A>, <A HREF="/doc/categories/?o=1mr&category_id=194&doctype=journal">Pyrenees</A><BR>
+	<B>Locales:</B> <A HREF="/doc/locales/?o=1mr&locale_id=7160707&doctype=journal">Europe</A>, <A HREF="/doc/locales/?o=1mr&locale_id=74&doctype=journal">France</A>, <A HREF="/doc/locales/?o=1mr&locale_id=20&doctype=journal">Belgium</A>, <A HREF="/doc/locales/?o=1mr&locale_id=81&doctype=journal">Germany</A>, <A HREF="/doc/locales/?o=1mr&locale_id=206&doctype=journal">Switzerland</A>, <A HREF="/doc/locales/?o=1mr&locale_id=4&doctype=journal">Andorra</A>, <A HREF="/doc/locales/?o=1mr&locale_id=198&doctype=journal">Spain</A>, <A HREF="/doc/locales/?o=1mr&locale_id=226&doctype=journal">United&nbsp;Kingdom</A>, <A HREF="/doc/locales/?o=1mr&locale_id=242&doctype=journal">England</A><BR>
+	<B>Year:</B> <A HREF="/doc/years/?year=2017&doctype=journal">2017</A><BR>
+	   <P>
+	<B>Permalink</B>: <a href="http://www.crazyguyonabike.com/doc/19499"  TITLE="Use this URL when linking to this journal">http://www.crazyguyonabike.com/doc/19499</A>
+	<P>
+	Copyright &copy 2017	By
+	<NOBR><A HREF="/directory/?o=1mr&user=BlueStratos&v=9" title="BlueStratos joined May 10th 2017&#10;Australia > New South Wales > Sydney">BlueStratos</A></NOBR> and <NOBR><A HREF="/directory/?o=1mr&user=PinkStratos" title="PinkStratos joined May 11th 2017">PinkStratos</A></NOBR> - (<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=12b">contact</A>)	<P>
+	Status: Work&nbsp;in&nbsp;progress <BR>
+	Last update: Monday October 23, 2017 12:03 (US/Pacific)	<BR>
+	   22,828 hits since May 12, 2017 (hitcounts updated nightly)	<BR>
+	668 pics	<P>
+
+	</CENTER>
+
+    
+
+   <HR>
+
+      <H2 ID="toc">Table of Contents</H2>
+      <DL>
+	<DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=503877&v=XP"  ID="503877">Introduction</A>: Where did the idea to do this ride come from? <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=504009&v=We"  ID="504009">Route concept plan</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=506493&v=WI"  ID="506493">Route Detail plan</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=508297&v=RO"  ID="508297">Ride Style</A>  <DD>
+	   
+
+   Australia: Training and Practice Tours <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=507261&v=Tb"  ID="507261">Commuting</A>: Sydney Easy Riders <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=507129&v=Uv"  ID="507129">First tour on the tandem 2013</A>: Singleton to Lithgow <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=507125&v=VC"  ID="507125">Second Tandem tour Nov 2015</A>: Lithgow - Black Springs - Taralga - Swallowtail Trail - Canyonleigh - Moss Vale - Bombaderry <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=507130&v=V8"  ID="507130">Third Tandem tour March 2016</A>: The Hell of the West - off road - Lithgow and Bicentennial National trail  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=507270&v=U7"  ID="507270">Fourth overnight tandem ride Oct 2016 with ER</A>: Mittagong Taralga Return via Wombeyan Caves and Swallow Tail Pass <DD>
+	   
+
+   Gear Planning  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=503970&v=Wo"  ID="503970">Boxing the Tandem</A>: Trial packing of tandem to see if it fits in our boxes <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=504012&v=Wx"  ID="504012">Strategies for minimising weight and bulk</A>: Ultralight items  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=506114&v=W5"  ID="506114">Bike Tools</A>: Titanium spanner <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Problems in Bike Preparation  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=506656&v=Vf"  ID="506656">Front Wheel problem</A>: Distorting dynamo hub wheel <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=506949&v=VE"  ID="506949">Rear Wheel problem</A>: Stuck Rohloff Sprocket <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=506952&v=V9"  ID="506952">Dynamo Light and USB charger</A>: Switching failure <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=508223&v=SD"  ID="508223">Electronics, Lights and Communications</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=508422&v=Re"  ID="508422">Packing List plan</A>: Detailed, with weights in g. <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=509338&v=Qe"  ID="509338">Our Tandem</A>: Ewen Gellie custom - details <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=514011&v=Pz"  ID="514011">Strava Dilemma</A>: What to do with a tandem, body weight and power calculations <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=514111&v=Pn"  ID="514111">At Sydney airport with all our stuff</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=515186&v=QA"  ID="515186">Hastings to Dover</A>: Day 1 of many <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=515357&v=Pi"  ID="515357">3 countries in a day</A>: Day 2 Dover to Calais to Ypres <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=515754&v=Pa"  ID="515754">Belgium continued</A>: Day 3 <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=515758&v=PJ"  ID="515758">To Brussels</A>: Day 4 <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516091&v=Ot"  ID="516091">Brussels to senelles</A>: A canoe polo day <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516094&v=P7"  ID="516094">Seneffe to Dinant and beyond</A>: It rained  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516279&v=O0"  ID="516279">Dinant to Bastogne</A>: A hard day in the saddle  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516622&v=NO"  ID="516622">Tunsdorf Germany to Sarre-union France</A>: 870 km total so far  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516772&v=NB"  ID="516772">To Strasbourg by hills and canals</A>: Day 10 and 1000 km so far <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516486&v=NP"  ID="516486">Bastogne to Remich on the Luxembourg/ Germany border</A>: A fairly hard day  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=516953&v=Mf"  ID="516953">To Colmar by the vineyard route</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=517140&v=MY"  ID="517140">To Basle - 1182 km so far</A>: The tour d'alsace <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=517322&v=MX"  ID="517322">Basel to Lucerne</A>: A hilly one <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=517471&v=MQ"  ID="517471">Lucerne to Meiringen</A>: Total 1375km to date <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=517675&v=Le"  ID="517675">Meiringen to Grindelwald</A>: Over the Grosse Scheidegg pass at 1961m <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=517854&v=Kt"  ID="517854">Rest day at Grindelwald</A>: Up the Jungfrau - by cog railway  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518048&v=Ke"  ID="518048">Grindelwald to Meiringen</A>: Back by the other side of the lake <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518223&v=KJ"  ID="518223">Meiringen to Ernen</A>: Over the Grimsel pass at 2162m <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518436&v=Jh"  ID="518436">To Sion</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518515&v=Iq"  ID="518515">Rest day</A>: Staying with friends  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=518525&v=J1"  ID="518525">Gear Update</A>: What's worked out differently to expected <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518705&v=Ip"  ID="518705">Rest day</A>: Day 21; Raining <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=518908&v=Ih"  ID="518908">Near Sion to Thonon les Bains</A>: On the road again: day 22 <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=519183&v=It"  ID="519183">Thonon les Bains to Geneva and then almost to Annecy</A>: Following the Rhone route <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=519406&v=Hl"  ID="519406">Annecy to the Col de La Colombiers 1613m</A>: Into the Alps again  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=519415&v=Hr"  ID="519415">To Samoens</A>: Odometer now 2006km <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=519836&v=Hx"  ID="519836">Via Ferrata day</A>: A non cycling day <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=519840&v=HL"  ID="519840">Alpine walking day</A>: Another non cycling day <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520039&v=Gn"  ID="520039">An actual rest day</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520037&v=Gu"  ID="520037">Round tour bike ride and Parapente</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520214&v=Gc"  ID="520214">Cirque du Fer and then to Flumet via St Gervais les Bains.</A>: To 2170km <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520467&v=G8"  ID="520467">Col Des Saisies 1650m</A>: 2216 kms since start <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520473&v=GE"  ID="520473">Cormet de Roselend 1968m</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520618&v=Fj"  ID="520618">Bourg st Maurice to Val d'Isere</A>: From 800m to 1800m <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520745&v=Ft"  ID="520745">Over the Col de l'Iserain</A>: Highest pass in Europe at 2770m; total kms 2367 <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=520894&v=FT"  ID="520894">Modane to St Colombian des Villards</A>: A circular route to approach another mountain  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521048&v=FW"  ID="521048">Col du Glandon and Col de la Croix de Fer</A>: Two cols in one day! <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521151&v=F3"  ID="521151">Over Alpe d'Huez</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521436&v=Eh"  ID="521436">Col de Sarenne 1990m</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521445&v=EU"  ID="521445">Col de Galibier 2645m</A>: Then on to Briancon <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521602&v=Dg"  ID="521602">Briancon to just before Embrun</A>: And a via Ferrata- la Balme <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521686&v=Dg"  ID="521686">To Sisteron</A>: Via Embrun and Tallard  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521846&v=DI"  ID="521846">To Sault</A>: Via col de Negron 1242m <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=521952&v=DO"  ID="521952">Mont Ventoux</A>: Up the Sault side and down the Malaucene side <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522321&v=Cf"  ID="522321">Avignon to somewhere on a road about 20km before Ales</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522325&v=CN"  ID="522325">To Florac</A>: A 5 col day in the Massif Central <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522444&v=CJ"  ID="522444">Via Ferrata du Rochefort</A>: An activity day <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522561&v=Bp"  ID="522561">Tarn Gorge to Millau Bridge</A>: A holiday within a holiday  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522790&v=BL"  ID="522790">Millau to Bedarieux</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=522791&v=BM"  ID="522791">Bedarieux to Olonzac</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523058&v=B4"  ID="523058">Olonzac to Montreal via Carcassonne</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523107&v=Al"  ID="523107">Montreal to Foix via Mirepoix</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523181&v=Al"  ID="523181">Foix to Ax les Thermes</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523366&v=9p"  ID="523366">Rest day at Ax les Thermes</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523505&v=9u"  ID="523505">Andorra</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523630&v=9r"  ID="523630">Spain; La Seu d'Urgell to Sort</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523778&v=9H"  ID="523778">Sort to El Pont de Suert</A>: Spanish Pyrenees in Catalunya  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=523931&v=8X"  ID="523931">El Pont de Suerte to Castejon de Sos</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=524009&v=7Z"  ID="524009">Observations on the countries we have ridden through</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=523933&v=82"  ID="523933">Pinks guide to campsite selection</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524008&v=85"  ID="524008">Caseljon de Sos to Ainsa</A>: Spectacular gorge and white water kayaking  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524180&v=7F"  ID="524180">Ainsa to Jaca</A>: Through the 2.7km long tunnel  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524275&v=7T"  ID="524275">Jaca to Ochagavia</A>: With Mary and Ben from Washington not the DC one. <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524368&v=73"  ID="524368">Ochagavia to St Jean Pied de Paul</A>: Rendezvous with friends and over the Pyrenees and back into France  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524516&v=6h"  ID="524516">To the Atlantic!</A>: To just north of Bayonne <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524607&v=6Q"  ID="524607">Bayonne to Mimizan</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524742&v=69"  ID="524742">Mimizan to La Teste (just past Dune du Pilat)</A>: On the Velodysee  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=524883&v=5V"  ID="524883">Tandem communication</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=524869&v=5y"  ID="524869">La Teste to Lacenau Ocean</A>: Beach cruising  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525010&v=5X"  ID="525010">Lacenau Ocean to Royan</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525086&v=5U"  ID="525086">Royan to La Rochelle via Rochefort</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525264&v=4y"  ID="525264">To St Vincent sur Mer</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525358&v=4c"  ID="525358">To St Jean de Mont</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525506&v=4Q"  ID="525506">To Pornic</A>: Via Noirmoutier en L'Ile <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525619&v=4D"  ID="525619">Pornic to Nantes</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525712&v=3k"  ID="525712">Near Nantes to Blaine</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525800&v=3X"  ID="525800">Blain to Malestroit via Redon</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=525931&v=3K"  ID="525931">Malestroit to Pontivy via town of Rohan</A>: Riders of Rohan  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526038&v=2s"  ID="526038">Pontivy to Carhaix</A>: It rained  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526121&v=2V"  ID="526121">Carhaix to Morlaix</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526214&v=2N"  ID="526214">Morlaix to Treguier</A>: Headed East across the North coast of Brittany  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526406&v=1o"  ID="526406">To Saint Brieuc and a bit further to Yffiniac</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526516&v=1n"  ID="526516">Yffiniac to Dinard</A>: And back a bit <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526676&v=1R"  ID="526676">Mont St Michel</A>  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526776&v=15"  ID="526776">St Benoit des Ondes to St Lunaire</A>: Via Cancale and Saint Malo <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=526912&v=f"  ID="526912">St Malo to Portsmouth</A>: On the ferry  <DD>
+	   
+
+   <a href="/doc/page/?o=1mr&page_id=527024&v=z"  ID="527024">Portsmouth to Hastings</A>: The final day of the tour  <DD>
+	   
+
+   Tips and Tricks: A post travel review of what worked and what didn't  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=527932&v=H"  ID="527932">Equipment</A>  <DD>
+	   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/doc/page/?o=1mr&page_id=528249&v=7"  ID="528249">Item by item comments</A>  </DL>
+
+      <P>
+<HR>
+   <TABLE BORDER="0" CELLPADDING="5" CELLSPACING="3" WIDTH=100%>
+   <TR>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a  href="/doc/page/?o=1mr&page_id=503877&v=XP">First</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <FONT COLOR="white">Prev</FONT>
+   </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a ACCESSKEY="n" href="/doc/page/?o=1mr&page_id=503877&v=XP">Next</A>
+       </TD>
+
+   <TD BGCOLOR=gainsboro ALIGN="CENTER" WIDTH=30>
+       <a ACCESSKEY="l" href="/doc/page/?o=1mr&page_id=528249&v=7">Last</A>
+       </TD>
+
+   <TD WIDTH=30>
+	<NOBR>(109 pages)</NOBR>
+   </TD>
+
+   <TD ALIGN="LEFT">
+         <nobr><IMG SRC="/images/pixel_pink.gif" WIDTH="4" HEIGHT="12" ALT="Contents" TITLE="Contents" BORDER="0"><A HREF="/doc/page/?o=1mr&page_id=504009&v=We"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 2" TITLE="Page 2" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508297&v=RO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 4" TITLE="Page 4" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507129&v=Uv"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 6" TITLE="Page 6" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=507130&v=V8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 8" TITLE="Page 8" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=503970&v=Wo"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 10" TITLE="Page 10" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506114&v=W5"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 12" TITLE="Page 12" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=506949&v=VE"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 14" TITLE="Page 14" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=508223&v=SD"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 16" TITLE="Page 16" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=509338&v=Qe"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 18" TITLE="Page 18" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=514111&v=Pn"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 20" TITLE="Page 20" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515357&v=Pi"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 22" TITLE="Page 22" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=515758&v=PJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 24" TITLE="Page 24" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516094&v=P7"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 26" TITLE="Page 26" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516622&v=NO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 28" TITLE="Page 28" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=516486&v=NP"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 30" TITLE="Page 30" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517140&v=MY"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 32" TITLE="Page 32" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517471&v=MQ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 34" TITLE="Page 34" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=517854&v=Kt"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 36" TITLE="Page 36" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518223&v=KJ"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 38" TITLE="Page 38" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518515&v=Iq"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 40" TITLE="Page 40" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=518705&v=Ip"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 42" TITLE="Page 42" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519183&v=It"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 44" TITLE="Page 44" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519415&v=Hr"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 46" TITLE="Page 46" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=519840&v=HL"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 48" TITLE="Page 48" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520037&v=Gu"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 50" TITLE="Page 50" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520467&v=G8"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 52" TITLE="Page 52" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520618&v=Fj"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 54" TITLE="Page 54" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=520894&v=FT"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 56" TITLE="Page 56" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521151&v=F3"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 58" TITLE="Page 58" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521445&v=EU"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 60" TITLE="Page 60" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521686&v=Dg"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 62" TITLE="Page 62" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=521952&v=DO"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 64" TITLE="Page 64" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522325&v=CN"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 66" TITLE="Page 66" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522561&v=Bp"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 68" TITLE="Page 68" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=522791&v=BM"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 70" TITLE="Page 70" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523107&v=Al"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 72" TITLE="Page 72" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523366&v=9p"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 74" TITLE="Page 74" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523630&v=9r"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 76" TITLE="Page 76" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523931&v=8X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 78" TITLE="Page 78" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=523933&v=82"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 80" TITLE="Page 80" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524180&v=7F"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 82" TITLE="Page 82" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524368&v=73"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 84" TITLE="Page 84" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524607&v=6Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 86" TITLE="Page 86" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=524883&v=5V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 88" TITLE="Page 88" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525010&v=5X"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 90" TITLE="Page 90" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525264&v=4y"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 92" TITLE="Page 92" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525506&v=4Q"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 94" TITLE="Page 94" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525712&v=3k"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 96" TITLE="Page 96" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=525931&v=3K"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 98" TITLE="Page 98" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526121&v=2V"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 100" TITLE="Page 100" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526406&v=1o"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 102" TITLE="Page 102" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526676&v=1R"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 104" TITLE="Page 104" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=526912&v=f"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 106" TITLE="Page 106" BORDER="0"></A><A HREF="/doc/page/?o=1mr&page_id=527932&v=H"><IMG SRC="/images/pixel_light_gray.gif" WIDTH="4" HEIGHT="12" ALT="Page 108" TITLE="Page 108" BORDER="0"></A></nobr>
+      </TD>
+   <TD ALIGN="RIGHT" WIDTH=50%>
+      </TD>
+
+   </TR>
+   </TABLE>
+
+   <P>
+   <HR>
+   <TABLE WIDTH=100% ID="bottom">
+      <TR>
+	<TD ALIGN="LEFT">"Alpine Tandem Tour" Copyright &copy; 2017 By
+   <NOBR><A HREF="/directory/?o=1mr&user=BlueStratos&v=9" title="BlueStratos joined May 10th 2017&#10;Australia > New South Wales > Sydney">BlueStratos</A></NOBR> and <NOBR><A HREF="/directory/?o=1mr&user=PinkStratos" title="PinkStratos joined May 11th 2017">PinkStratos</A></NOBR> - (<A HREF="/doc/guestbook/?o=1mr&doc_id=19499&v=12b">contact</A>).
+   All rights reserved.
+   <BR>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>
+Website Copyright &copy; 2000-2017 by Neil Gunton Fri 24 Nov 2017 18:14 (US/Pacific)
+(<span id="span_timer">0.132s</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#top">Top</A>
+&nbsp;&nbsp;
+<a href="/link/?o=1mr&ref=%252Fdoc%252F%253Fo%253D1mr%2526doc_id%253D19499%2526v%253DEd"  target="_blank">Link</A>
+&nbsp;&nbsp;
+<a href="/report/?o=1mr&ref=%252Fdoc%252F%253Fo%253D1mr%2526doc_id%253D19499%2526v%253DEd"  TITLE="Report problems with this page to the webmaster" target="_blank">Report</A>
+&nbsp;&nbsp;
+<a href="/website/tos/">Terms of Service</A>
+&nbsp;&nbsp;
+</td>
+<td>
+<table cellpadding="2" cellspacing="3">
+      <tr>
+         <td ><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.crazyguyonabike.com%2Fdoc%2F%3Fdoc_id%3D19499"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/facebook/facebook-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Facebook"></a></td>
+         <td ><a href="https://twitter.com/home?status=http%3A%2F%2Fwww.crazyguyonabike.com%2Fdoc%2F%3Fdoc_id%3D19499"  style="text-decoration:none; color:white;" target="_blank"><img src="/images/icons/twitter/twitter-white-16x16.png"  style="vertical-align: bottom;" border="0" title="Share on Twitter"></a></td>
+      </tr>
+   </table>
+</td>
+<td></td>
+</tr>
+</table>
+</TD>
+	<TD><a href="/email/guestbook/message/?email=1623840772"><img src="/images/guestbook.gif"  STYLE="display:none;"></A></TD>
+	</TR>
+   </TABLE>
+<div id="div_donation_reminder" style="display:none; position:fixed; top:50%; left:50%; width:60%; height:60%; transform:translate(-50%,-50%); padding:16px; border:16px solid orange; background-color:white; z-index:1002; overflow:auto;"></div>
+   <div id="div_black_overlay" style="display:none; position:fixed; top:0%; left:0%; width:100%; height:100%; background-color:black; z-index:1001; opacity:.80;"></div>
+</BODY>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function donation_reminder_callback ()
+{
+    if (request.readyState == 4)
+    {
+	show('div_black_overlay');
+	show('div_donation_reminder');
+	el('div_donation_reminder').innerHTML = request.responseText;
+    }
+}
+
+function do_donation_reminder ()
+{
+    createRequest();
+    if (request != null)
+    {
+	var d = new Date();
+	var now = Math.round(d.getTime() / 1000);
+	var url = '/ajax/insecure/get_donation_reminder.html?browser=' + getCookie('browser') + '&uid=' + getCookie('uid');
+	request.open("GET", url, true);
+	request.onreadystatechange = donation_reminder_callback;
+	var result = request.send(null);
+    }
+}
+
+function check_last_donation_callback ()
+{
+    if (request.readyState == 4)
+    {
+	var result = request.responseText;
+	if (result == '0')
+	{
+	    do_donation_reminder();
+	}
+    }
+}
+
+function check_donation_reminder ()
+{
+    var d = new Date();
+    var now = Math.round(d.getTime() / 1000);
+    if (getCookie ('last_donation_reminder') == '')
+    {
+	setCookie ('last_donation_reminder', now, 365*10);
+    }
+    else
+    {
+	if (false)
+	{
+	    do_donation_reminder();
+	}
+	else if (true && (parseInt (getCookie ('last_donation_reminder')) + 7776000 < now || false))
+	{
+	    createRequest();
+	    if (request != null)
+	    {
+		var url = '/ajax/insecure/check_last_donation.html?browser=' + getCookie('browser') + '&uid=' + getCookie('uid') + '&last_donation_reminder=' + getCookie('last_donation_reminder') + '&now=' + now;
+		request.open("GET", url, true);
+		request.onreadystatechange = check_last_donation_callback;
+		var result = request.send(null);
+	    }
+	    setCookie ('last_donation_reminder', now, 365*10);
+	}
+    }
+}
+
+function keyboard_navigation (event)
+{
+    try
+    {
+	if (event.altKey)
+	{
+	    switch (event.keyCode)
+	    {
+	    case 70: // f
+		if (document.querySelectorAll('a[accesskey="f"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="f"]')[0];
+		}
+		break;
+	    case 76: // l
+		if (document.querySelectorAll('a[accesskey="l"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="l"]')[0];
+		}
+		break;
+	    case 78: // n
+		if (document.querySelectorAll('a[accesskey="n"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="n"]')[0];
+		}
+		break;
+	    case 80: // p
+		if (document.querySelectorAll('a[accesskey="p"]').length > 0)
+		{
+		    document.location.href = document.querySelectorAll('a[accesskey="p"]')[0];
+		}
+		break;
+	    }
+	}
+    }
+    catch(error)
+    {
+    }
+}
+
+function do_onload ()
+{
+    check_donation_reminder();
+
+    addEventListener ('keydown', keyboard_navigation);
+     
+    
+	if (top != window)
+	{
+		top.location.href = window.location.href;
+	}
+    
+}
+
+
+//-->
+</script>
+</HTML>
