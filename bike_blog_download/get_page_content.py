@@ -45,6 +45,8 @@ def get_page_text(html):
         if '<DIV ALIGN="LEFT" >' in data:
             content = html[i + 1]
             content = content.replace('<P>', '\n')
+            # content = content.replace('<DIV>', '\n')
+            # content = content.replace('<BR>', '\n')
             return content
 
 
